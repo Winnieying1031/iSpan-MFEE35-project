@@ -1,0 +1,67 @@
+/* 字體顏色*/
+@font-face {
+    font-family: "Lobster";
+    src: url("Lobster/Lobster-Regular.ttf");
+    font-family: "MochiyPopOne-Regular";
+}
+
+#productTitle {
+    color: #606c38;
+    font-weight: bold;
+}
+
+h5.card-title,
+.modal-title {
+    font-family: "Permanent_Marker";
+    color: #606c38;
+    font-weight: bold;
+}
+
+
+.card {
+    cursor: pointer;
+}
+
+/* 尺寸選單 */
+.select_size {
+    font-size: 15px;
+    letter-spacing: 2px;
+    height: 33px;
+    border: 2px solid #606c38;
+    border-radius: 2px;
+    height: 40px;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    color: #606c38;
+    ;
+}
+
+/* 加入購物車按鈕 */
+.btn_bag {
+    border-radius: 2px;
+    background: #a4ac86;
+    color: #F2F3EB;
+    cursor: pointer;
+    height: 40px;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+}
+
+.btn_bag:hover {
+    border: solid 2px #a4ac86;
+    color: #a4ac86;
+}
+
+/* 購物車彈跳視窗確認按鈕 */
+.btn_modal_check {
+    background: #a4ac86;
+    color: #F2F3EB;
+    border: solid 2px #a4ac86;
+}
+
+.btn_modal_check:hover {
+    border: solid 2px #a4ac86;
+    color: #a4ac86;
+}

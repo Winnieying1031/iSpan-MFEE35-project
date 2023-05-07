@@ -1,0 +1,133 @@
+/* 字體顏色*/
+@font-face {
+    font-family: "Lobster";
+    src: url("Lobster/Lobster-Regular.ttf");
+    font-family: "MochiyPopOne-Regular";
+    src: url("Mochiy_Pop_One/MochiyPopOne-Regular.ttf");
+    font-family: "Permanent_Marker";
+    src: url("../Permanent_Marker/PermanentMarker-Regular.ttf");
+    font-family: "M_PLUS_Rounded_1c";
+    src: url("../M_PLUS_Rounded_1c/MPLUSRounded1c-Regular.ttf");
+    font-family: "chenyuluoyan_thin-main";
+    src: url("chenyuluoyan_thin-main/chenyuluoyan_thin-main/ChenYuluoyan-Thin-Monospaced.ttf");
+}
+
+
+
+/* h2#teamName {
+    font-family: 'Lobster', 'chenyuluoyan_thin-main';
+    color: #283618;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+p#slogan {
+    background-color: #e9edc9;
+    font-family: 'chenyuluoyan_thin-main';
+    font-weight: bold;
+    color: #606c38;
+    font-size: 1.2rem;
+} */
+
+h2#title,
+h2.title,
+span#title {
+    color: #606c38;
+    font-weight: bold;
+}
+
+/* 側邊欄style */
+.social {
+    position: fixed;
+    right: 0;
+    bottom: 100px;
+}
+
+.social>div {
+    opacity: 0.5;
+}
+
+.social>div:hover {
+    opacity: 1.0;
+}
+
+/* 球員介紹 */
+.card {
+    position: relative;
+    display: block;
+    flex: 1 1 0px;
+    transition: transform 500ms;
+    cursor: pointer;
+}
+
+.col .card:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+/* 追蹤球員ig按鈕 */
+.btn_dreamer_follow {
+    background: #a4ac86;
+    color: #F2F3EB;
+    border: solid 2px #a4ac86;
+}
+
+.btn_dreamer_follow:hover {
+    border: solid 2px #a4ac86;
+    color: #a4ac86;
+}
+
+
+/* Add Animation */
+.modal-content,
+#caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0.1)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}

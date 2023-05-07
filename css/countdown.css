@@ -1,0 +1,17 @@
+div[id="countdown"]{
+    
+    display: flex;
+}
+
+div[id="countdounDay"],
+div[id="countdounHour"],
+div[id="countdounMin"],
+div[id="countdounSec"]{
+    flex: auto;
+    border: 1px #c2c5aa solid;
+    text-align: center;
+    padding: 50px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #656d4a;
+}
