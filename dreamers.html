@@ -1,0 +1,1060 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>台新夢想家 | 球員介紹</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="../小專題/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- 文件關聯 -->
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link href="./img/logo/logo icon.png" rel="icon" type="image/png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!-- 字體 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;700&family=Lobster&display=swap"
+    rel="stylesheet">
+
+  <!-- 自己寫的CSS -->
+  <link rel="stylesheet" href="./css/img.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/contact_form.css">
+  <link rel="stylesheet" href="./css/shopping.css">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    /* 側邊欄style */
+    .social {
+      position: fixed;
+      right: 0;
+      bottom: 100px;
+    }
+
+    .social>div {
+      opacity: 0.5;
+    }
+
+    .social>div:hover {
+      opacity: 1.0;
+    }
+
+    /* 字體顏色*/
+    @font-face {
+      font-family: "Lobster";
+      src: url("Lobster/Lobster-Regular.ttf");
+      font-family: "chenyuluoyan_thin-main";
+      src: url("chenyuluoyan_thin-main/chenyuluoyan_thin-main/ChenYuluoyan-Thin-Monospaced.ttf");
+
+    }
+
+    h2#teamName {
+      font-family: 'Lobster', 'chenyuluoyan_thin-main';
+      color: #283618;
+      font-weight: bold;
+      font-size: 3rem;
+    }
+
+    p#slogan {
+      background-color: #e9edc9;
+      font-family: 'chenyuluoyan_thin-main';
+      font-weight: bold;
+      color: #606c38;
+      font-size: 1.2rem;
+    }
+
+    h2#title,
+    span#title {
+      color: #606c38;
+    }
+
+    h5.card-title,
+    .modal-title {
+      font-family: 'chenyuluoyan_thin-main';
+      color: #606c38;
+      font-size: 3rem;
+    }
+
+    span#position {
+      color: #a3b18a;
+    }
+
+    /* 購物車icon */
+    .badge-notify {
+      background: #f28482;
+      position: relative;
+      top: -20px;
+      right: 5px;
+    }
+
+    .my-cart-icon-affix {
+      /* position: fixed; */
+      z-index: 999;
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="./carousel/carousel.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html"><img style="height: 40px;" class="img-fluid"
+            src="./img/logo/logo.png" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="story.html">球隊故事</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./dreamers.html">球員介紹</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./schdualTIcket.html">比賽賽程</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://ticket.ibon.com.tw/ActivityInfo/Details/37455">購票</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./shopping.html">商城</a>
+            </li>
+          </ul>
+          <div class="nav_icon">
+            <button class="btn ">
+              <a class="nav-link" href="./login.html"><i class="bi bi-person"></i>
+              </a></button>
+            <button class="btn ">
+              <span class="bi bi-bag glyphicon glyphicon-shopping-cart my-cart-icon"><span
+                  class="badge badge-notify my-cart-badge"></span></span>
+            </button>
+            <button class="btn ">
+              <a class="nav-link" data-bs-toggle="modal" data-bs-target="#modal_email" href=""><i
+                  class="bi bi-envelope"></i>
+              </a></button>
+
+            <button id="btn_search" class="btn search-box">
+              <input type="text" class="search-input" placeholder="Search">
+              <a class="nav-link search-btn" href=""><i class="bi bi-search"></i>
+              </a></button>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- 標語圖 -->
+    <div class="container-fluid">
+      <img src="./img/img2.jpg" alt="" width="100%">
+    </div>
+
+    <!-- 主體 -->
+    <div class="container mt-3">
+      <h2 id="teamName">Formosa Taishin Dreamers 福爾摩沙台新夢想家</h2>
+      <div class="container">
+        <p id="slogan" class="p-3 text-center">「一個人作夢，夢想只是空想；一群人作夢，夢想就會成真。」</p>
+      </div>
+
+      <h2 id="title">球員介紹</h2>
+
+      <!-- 球員介紹card -->
+      <div class="row row-cols-2 row-cols-md-4 g-4">
+        <div class="col" data-bs-toggle="modal" data-bs-target="#modal_1">
+          <div class="card h-80 ">
+            <img id="players1" src="./img/dreamers/players1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">陳振傑 <br>Jay <span id="position" class="ms-5">G</span></h5>
+              <p class="card-text">1997.09.16 | 185cm | 85kg</p>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-bs-toggle="modal" data-bs-target="#modal_2">
+          <div class="card h-80">
+            <img id="players2" src="./img/dreamers/players2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">吳家駿 <br>Hayden<span id="position" class="ms-5">G</span></h5>
+              <p class="card-text">1994.03.03 | 174cm | 64kg</p>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-bs-toggle="modal" data-bs-target="#modal_3">
+          <div class="card h-80">
+            <img id="players3" src="./img/dreamers/players3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">林耀宗 <br>Manimal<span id="position" class="ms-5">F</span></h5>
+              <p class="card-text">1990.09.07 | 194cm | 100kg</p>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-bs-toggle="modal" data-bs-target="#modal_4">
+          <div class="card h-80">
+            <img id="players4" src="./img/dreamers/players4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">王振原 <br>Jason<span id="position" class="ms-5">G</span></h5>
+              <p class="card-text">1998.09.02 | 175cm | 72kg</p>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-bs-toggle="modal" data-bs-target="#modal_5">
+          <div class="card h-80">
+            <img id="players5" src="./img/dreamers/players5.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">林俊吉 <br>AG<span id="position" class="ms-5">G</span></h5>
+              <p class="card-text">1998.01.29 | 173cm | 70kg</p>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-bs-toggle="modal" data-bs-target="#modal_6">
+          <div class="card h-80">
+            <img id="players6" src="./img/dreamers/players6.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">吳永盛 <br>Jeff<span id="position" class="ms-5">G</span></h5>
+              <p class="card-text">1996.10.19 | 186cm | 85kg</p>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-bs-toggle="modal" data-bs-target="#modal_7">
+          <div class="card h-80">
+            <img id="players7" src="./img/dreamers/players7.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">波因特 <br>Pointer<span id="position" class="ms-5">F</span></h5>
+              <p class="card-text">1992.05.06 | 195cm | 90kg</p>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-bs-toggle="modal" data-bs-target="#modal_8">
+          <div class="card h-80">
+            <img id="players8" src="./img/dreamers/players8.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">楊盛硯 <br>Sheng Yen<span id="position" class="ms-5">G</span></h5>
+              <p class="card-text">1997.01.18 | 178cm | 80kg</p>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-bs-toggle="modal" data-bs-target="#modal_9">
+          <div class="card h-80">
+            <img id="players9" src="./img/dreamers/players9.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">簡浩 <br>Doug <span id="position" class="ms-5">F</span></h5>
+              <p class="card-text">1985 | 200cm | 90kg</p>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-bs-toggle="modal" data-bs-target="#modal_10">
+          <div class="card h-80">
+            <img id="players10" src="./img/dreamers/players10.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">錢肯尼 <br>Kenny<span id="position" class="ms-5">F</span></h5>
+              <p class="card-text">1995.02.06 | 193cm | 88kg</p>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-bs-toggle="modal" data-bs-target="#modal_11">
+          <div class="card h-80">
+            <img id="players11" src="./img/dreamers/players11.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">李德威 <br>Derek<span id="position" class="ms-5">C</span></h5>
+              <p class="card-text">1991.10.15 | 200cm | 110kg</p>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-bs-toggle="modal" data-bs-target="#modal_12">
+          <div class="card h-80">
+            <img id="players12" src="./img/dreamers/players12.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">盧冠良 <br>Ryan<span id="position" class="ms-5">G</span></h5>
+              <p class="card-text">1991.04.09 | 185cm | 85kg</p>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-bs-toggle="modal" data-bs-target="#modal_13">
+          <div class="card h-80">
+            <img id="players13" src="./img/dreamers/players13.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">吳松蔚 <br>Sung Wei<span id="position" class="ms-5">G</span></h5>
+              <p class="card-text">1993.05.21 | 185cm | 85kg</p>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-bs-toggle="modal" data-bs-target="#modal_14">
+          <div class="card h-80">
+            <img id="players14" src="./img/dreamers/players14.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">吉爾貝克 <br>Gillbeck<span id="position" class="ms-5">C</span></h5>
+              <p class="card-text">1996.12.09 | 213cm | 110kg</p>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-bs-toggle="modal" data-bs-target="#modal_15">
+          <div class="card h-80">
+            <img id="players15" src="./img/dreamers/players15.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">周柏臣 <br>Jerry<span id="position" class="ms-5">F</span></h5>
+              <p class="card-text">1990.08.08 | 198cm | 98kg</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 球員介紹 modal -->
+      <div id="modal_1" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">陳振傑 JAY #0</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>綽號：無
+                <br>
+                年資：2年
+                <br>
+                身高：185 cm
+                <br>
+                體重：85 kg
+                <br>
+                生日：1997-09-16
+                <br>
+                出生地：台北
+                <br>
+                身份：本土
+                <hr>
+                學歷：Grand View University<br>
+                &emsp;&emsp;&emsp;Modesto Christian School, CA<br>
+                經歷：2020-23 PLG 福爾摩沙台新夢想家籃球隊<br>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <a type="button" class="btn btn_dreamer_follow" target="_blank"
+                href="https://www.instagram.com/jaychen_7/?hl=zh-tw">Follow</a>
+            </div>
+            <div id="caption"></div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_2" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">吳家駿 HAYDEN #3</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>綽號：無
+                <br>
+                年資：1年
+                <br>
+                身高：174 cm
+                <br>
+                體重：68 kg
+                <br>
+                生日：1994-03-03
+                <br>
+                出生地：苗栗
+                <br>
+                身份：本土
+                <hr>
+                學歷：國立體育大學<br>
+                &emsp;&emsp;&emsp;南山高中<br>
+                經歷：2022-23 PLG 福爾摩沙台新夢想家籃球隊<br>
+                &emsp;&emsp;&emsp;2021-22 PLG 桃園領航猿籃球隊<br>
+                &emsp;&emsp;&emsp;2016-2021 SBL 桃園璞園建築籃球隊<br>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <a type="button" class="btn btn_dreamer_follow" target="_blank"
+                href="https://www.instagram.com/hayden_wu03/">Follow</a>
+            </div>
+            <div id="caption"></div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_3" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">林耀宗 MANIMAL #7</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>綽號：把拔
+                <br>
+                年資：2年
+                <br>
+                身高：194 cm
+                <br>
+                體重：100 kg
+                <br>
+                生日：1990-09-07
+                <br>
+                出生地：台東
+                <br>
+                身份：本土
+                <hr>
+                學歷：明道大學<br>
+                &emsp;&emsp;&emsp;南山高中<br>
+                經歷：2022-23 PLG 福爾摩沙台新夢想家籃球隊<br>
+                &emsp;&emsp;&emsp;2020-2022 PLG 桃園領航猿籃球隊<br>
+                &emsp;&emsp;&emsp;2014-2020 SBL 桃園璞園建築籃球隊<br>
+                &emsp;&emsp;&emsp;2012-2014 SBL 台灣大籃球隊
+
+
+              </p>
+            </div>
+            <div class="modal-footer">
+              <a type="button" class="btn btn_dreamer_follow" target="_blank"
+                href="https://www.instagram.com/yaotsung/">Follow</a>
+            </div>
+            <div id="caption"></div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_4" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">王振原 Jason #8</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>綽號：無
+                <br>
+                年資：1年(21' 第三輪第五順位)
+                <br>
+                身高：175 cm
+                <br>
+                體重：75 kg
+                <br>
+                生日：1998-09-02
+                <br>
+                出生地：彰化
+                <br>
+                身份：本土
+                <hr>
+                學歷：國立政治大學<br>
+                &emsp;&emsp;&emsp;彰化高中<br>
+                經歷：2021-23 PLG 福爾摩沙台新夢想家籃球隊<br>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <a type="button" class="btn btn_dreamer_follow" target="_blank"
+                href="https://www.instagram.com/34allen34/">Follow</a>
+            </div>
+            <div id="caption"></div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_5" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">林俊吉 AG #11</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>綽號：夢想小跑車、夢想吉娃娃
+                <br>
+                年資：2年
+                <br>
+                身高：173 cm
+                <br>
+                體重：70 kg
+                <br>
+                生日：1998-01-29
+                <br>
+                出生地：南投
+                <br>
+                身份：本土
+                <hr>
+                學歷：健行科技大學<br>
+                &emsp;&emsp;&emsp;能仁高中<br>
+                經歷：2020-23 PLG 福爾摩沙台新夢想家籃球隊<br>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <a type="button" class="btn btn_dreamer_follow" target="_blank"
+                href="https://www.instagram.com/luka0129_/">Follow</a>
+            </div>
+            <div id="caption"></div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_6" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">吳永盛 JEFF #14</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>綽號：無
+                <br>
+                年資：1年
+                <br>
+                身高：186 cm
+                <br>
+                體重：85 kg
+                <br>
+                生日：1996-10-19
+                <br>
+                出生地：台北
+                <br>
+                身份：本土
+                <hr>
+                學歷：California State University, Sacramento<br>
+                &emsp;&emsp;&emsp;Modesto Christian School, CA<br>
+                經歷：2021-23 PLG 福爾摩沙台新夢想家籃球隊<br>
+                &emsp;&emsp;&emsp;2020-21 CBA 新疆廣匯飛虎籃球隊<br>
+                &emsp;&emsp;&emsp;2019-20 CBA 上海大鯊魚籃球隊<br>
+                &emsp;&emsp;&emsp;2019 ABL 寶島夢想家籃球隊
+
+
+              </p>
+            </div>
+            <div class="modal-footer">
+              <a type="button" class="btn btn_dreamer_follow" target="_blank"
+                href="https://www.instagram.com/jeffwu_14/">Follow</a>
+            </div>
+            <div id="caption"></div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_7" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">波音特 POINTER #15</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>綽號：無
+                <br>
+                年資：0年
+                <br>
+                身高：195 cm
+                <br>
+                體重：90 kg
+                <br>
+                生日：1992-05-06
+                <br>
+                出生地：美國
+                <br>
+                身份：洋將
+                <hr>
+                學歷：St. John's<br>
+                &emsp;&emsp;&emsp;Quality Education Academy<br>
+                經歷：2022-23 PLG 福爾摩沙台新夢想家籃球隊<br>
+
+
+
+              </p>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+            <div id="caption"></div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_8" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">楊盛硯 #18</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>綽號：無
+                <br>
+                年資：2年
+                <br>
+                身高：178 cm
+                <br>
+                體重：80 kg
+                <br>
+                生日：1997-01-18
+                <br>
+                出生地：台灣
+                <br>
+                身份：本土
+                <hr>
+                學歷：國立體育大學<br>
+                &emsp;&emsp;&emsp;新榮高中<br>
+                經歷：2020-23 PLG 福爾摩沙台新夢想家籃球隊<br>
+
+
+
+              </p>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+            <div id="caption"></div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_9" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">簡浩 DOUG #21</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>綽號：無
+                <br>
+                年資：1年
+                <br>
+                身高：200 cm
+                <br>
+                體重：90 kg
+                <br>
+                生日：1985-03-07
+                <br>
+                出生地：台灣
+                <br>
+                身份：本土
+                <hr>
+                學歷：Madonna University<br>
+                &emsp;&emsp;&emsp;臺北美國學校<br>
+                經歷：2021-23 PLG 福爾摩沙台新夢想家籃球隊<br>
+                &emsp;&emsp;&emsp;2019-21 SBL 裕隆納智捷籃球隊<br>
+                &emsp;&emsp;&emsp;2014-19 SBL 璞園建築籃球隊<br>
+                &emsp;&emsp;&emsp;2013-14 CBA 江蘇南鋼籃球隊
+              </p>
+            </div>
+            <div class="modal-footer">
+              <a type="button" class="btn btn_dreamer_follow" target="_blank"
+                href="https://www.instagram.com/doug.creighton/">Follow</a>
+            </div>
+            <div id="caption"></div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_10" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">錢肯尼 KENNY #23</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>綽號：無
+                <br>
+                年資：2年
+                <br>
+                身高：193 cm
+                <br>
+                體重：88 kg
+                <br>
+                生日：1995-02-06
+                <br>
+                出生地：美國
+                <br>
+                身份：華裔
+                <hr>
+                學歷：Broward College<br>
+                經歷：2020-23 PLG 福爾摩沙台新夢想家籃球隊<br>
+                &emsp;&emsp;&emsp;2017-19 ABL 寶島夢想家籃球隊<br>
+                獎項：年度進步獎 (21-22)<br>
+                &emsp;&emsp;&emsp;防守第一隊 (21-22)<br>
+                &emsp;&emsp;&emsp;年度第二隊 (21-22)<br>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <a type="button" class="btn btn_dreamer_follow" target="_blank"
+                href="https://www.instagram.com/kennychien23/?hl=zh-tw">Follow</a>
+            </div>
+            <div id="caption"></div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_11" class="modal" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">李德威 DEREK #26</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>綽號：無
+                <br>
+                年資：2年
+                <br>
+                身高：200 cm
+                <br>
+                體重：110 kg
+                <br>
+                生日：1991-10-15
+                <br>
+                出生地：基隆
+                <br>
+                身份：本土
+                <hr>
+                學歷：中州科技大學<br>
+                &emsp;&emsp;&emsp;能仁家商<br>
+                經歷：2020-23 PLG 福爾摩沙台新夢想家籃球隊<br>
+                &emsp;&emsp;&emsp;2010-20 SBL 裕隆納智捷籃球隊<br>
+                獎項：防守第一隊 (20-21)<br>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <a type="button" class="btn btn_dreamer_follow" target="_blank"
+                href="https://www.instagram.com/derek26_li/">Follow</a>
+            </div>
+            <div id="caption"></div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_12" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">盧冠良 RYAN #28</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>綽號：無
+                <br>
+                年資：0年
+                <br>
+                身高：185 cm
+                <br>
+                體重：85 kg
+                <br>
+                生日：1991-04-09
+                <br>
+                出生地：苗栗
+                <br>
+                身份：本土
+                <hr>
+                學歷：國立台灣藝術大學<br>
+                &emsp;&emsp;&emsp;松山高中<br>
+                經歷：2022-23 PLG 福爾摩沙台新夢想家籃球隊<br>
+                &emsp;&emsp;&emsp;2019-22 SBL 裕隆納智捷籃球隊<br>
+                &emsp;&emsp;&emsp;2014-19 SBL 新北裕隆納智捷
+              </p>
+            </div>
+            <div class="modal-footer">
+            </div>
+            <div id="caption"></div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_13" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">吳松蔚 SUNG WEI #30</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>綽號：無
+                <br>
+                年資：2年
+                <br>
+                身高：185 cm
+                <br>
+                體重：85 kg
+                <br>
+                生日：1993-05-21
+                <br>
+                出生地：台中
+                <br>
+                身份：本土
+                <hr>
+                學歷：義守大學<br>
+                &emsp;&emsp;&emsp;三民家商<br>
+                經歷：2020-23 PLG 福爾摩沙台新夢想家籃球隊<br>
+                &emsp;&emsp;&emsp;2017-20 ABL 寶島夢想家籃球隊隊<br>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <a type="button" class="btn btn_dreamer_follow" target="_blank"
+                href="https://www.instagram.com/sung_wei_11/">Follow</a>
+            </div>
+            <div id="caption"></div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_14" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">吉爾貝克 <br>BRANDON GILBECK #34</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>綽號：無
+                <br>
+                年資：1年
+                <br>
+                身高：213 cm
+                <br>
+                體重：110 kg
+                <br>
+                生日：1996-12-09
+                <br>
+                出生地：美國
+                <br>
+                身份：洋將
+                <hr>
+                學歷：West Illinois University<br>
+                &emsp;&emsp;&emsp;River Valley High School, WI<br>
+                經歷：2021-23 PLG 福爾摩沙台新夢想家籃球隊<br>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <a type="button" class="btn btn_dreamer_follow" target="_blank"
+                href="https://www.instagram.com/grandon_bilbeck/">Follow</a>
+            </div>
+            <div id="caption"></div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_15" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">周柏臣 JERRY #88</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>綽號：無
+                <br>
+                年資：0年
+                <br>
+                身高：198 cm
+                <br>
+                體重：98 kg
+                <br>
+                生日：1990-08-08
+                <br>
+                出生地：台灣
+                <br>
+                身份：本土
+                <hr>
+                學歷：國立臺灣師範大學<br>
+                &emsp;&emsp;&emsp;松山高中<br>
+                經歷：2022-23 PLG 福爾摩沙台新夢想家籃球隊<br>
+                &emsp;&emsp;&emsp;2019-22 SBL 裕隆納智捷籃球隊<br>
+                &emsp;&emsp;&emsp;2011-19 SBL 新北裕隆納智捷籃球隊<br>
+
+              </p>
+            </div>
+            <div class="modal-footer">
+              <a type="button" class="btn btn_dreamer_follow" target="_blank"
+                href="https://www.instagram.com/jerry_chou_8/">Follow</a>
+            </div>
+            <div id="caption"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+    <!-- email modal -->
+    <div id="modal_email" class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">聯絡我們</h5>
+
+            <!-- <p class="d-flex" style="font-size: 10px;">謝謝您的主動來信，<br>請留下您的聯絡資料及諮詢的問題，我們會盡快回覆</p> -->
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div>
+
+          </div>
+          <div class="modal-body">
+
+            <form action="#" id="contact_form">
+              <div class="name">
+                <label for="name"></label>
+                <input type="text" placeholder="Name" name="name" id="name_input" required>
+              </div>
+              <div class="email">
+                <label for="email"></label>
+                <input type="email" placeholder="e-mail" name="email" id="email_input" required>
+              </div>
+              <div class="message">
+                <label for="message"></label>
+                <textarea name="message" placeholder="請留下您想詢問的問題，或是留下e-mail以外的聯絡方式。" id="message_input" cols="30"
+                  rows="5" required></textarea>
+              </div>
+              <div class="submit">
+                <input type="submit" value="Send Message" id="form_button" />
+              </div>
+
+            </form>
+          </div>
+          <div class="modal-footer">
+
+            <!-- <button id="form_button" type="submit" class="btn btn-outline-success">發送</button> -->
+          </div>
+          <div id="caption"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 側邊社群連結 -->
+    <div class="social me-3">
+      <div class="p-1" id="FB">
+        <a href="https://www.facebook.com/profile.php?id=100063493279527" target="_blank">
+          <img width="20" src="./img/facebook.png" alt="">
+        </a>
+      </div>
+
+      <div class="p-1" id="IG">
+        <a href="https://www.instagram.com/formosataishindreamers/" target="_blank">
+          <img width="20" src="./img/instagram.png" alt="">
+        </a>
+      </div>
+
+      <div class="p-1" id="YT">
+        <a href="https://www.youtube.com/channel/UCBWn_o4Z_FghGt6eB5gnkOQ/featured" target="_blank">
+          <img height="20" src="./img/youtube.png" alt="">
+        </a>
+      </div>
+
+      <div class="p-1">
+        <a href="#"><img src="./img/upward.png" width="20"></a>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <!-- FOOTER -->
+    <footer class="container py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">合作邀約</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">球迷意見</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">購物須知</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">條款</a></li>
+      </ul>
+    </footer>
+  </main>
+
+
+  <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="./js/img.js"></script> -->
+  <script src="./js/jquery-2.2.3.min.js"></script>
+  <script type='text/javascript' src="./js/bootstrap.min.js"></script>
+  <script type='text/javascript' src="./js/jquery.mycart.js"></script>
+  <script type='text/javascript'>
+    $(function () {
+
+      var goToCartIcon = function ($addTocartBtn) {
+        var $cartIcon = $(".my-cart-icon");
+        var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({ "position": "fixed", "z-index": "999" });
+        $addTocartBtn.prepend($image);
+        var position = $cartIcon.position();
+        $image.animate({
+          top: position.top,
+          left: position.left
+        }, 500, "linear", function () {
+          $image.remove();
+        });
+      }
+
+      $('.my-cart-btn').myCart({
+        currencySymbol: '$',
+        classCartIcon: 'my-cart-icon',
+        classCartBadge: 'my-cart-badge',
+        classProductQuantity: 'my-product-quantity',
+        classProductRemove: 'my-product-remove',
+        classCheckoutCart: 'my-cart-checkout',
+        affixCartIcon: true,
+        showCheckoutModal: true,
+        // numberOfDecimals: 2,
+        cartItems: [],
+        clickOnAddToCart: function ($addTocart) {
+          goToCartIcon($addTocart);
+        },
+        afterAddOnCart: function (products, totalPrice, totalQuantity) {
+          console.log("afterAddOnCart", products, totalPrice, totalQuantity);
+        },
+        clickOnCartIcon: function ($cartIcon, products, totalPrice, totalQuantity) {
+          console.log("cart icon clicked", $cartIcon, products, totalPrice, totalQuantity);
+        },
+        checkoutCart: function (products, totalPrice, totalQuantity) {
+          var checkoutString = "Total Price: " + totalPrice + "\nTotal Quantity: " + totalQuantity;
+          checkoutString += "\n\n id \t name \t summary \t price \t quantity \t image path";
+          $.each(products, function () {
+            checkoutString += ("\n " + this.id + " \t " + this.name + " \t " + this.summary + " \t " + this.price + " \t " + this.quantity + " \t " + this.image);
+          });
+          alert(checkoutString)
+          console.log("checking out", products, totalPrice, totalQuantity);
+        },
+        // getDiscountPrice: function (products, totalPrice, totalQuantity) {
+        //   console.log("calculating discount", products, totalPrice, totalQuantity);
+        //   return totalPrice * 0.5;
+        // }
+      });
+
+      // $("#addNewProduct").click(function (event) {
+      //   var currentElementNo = $(".row").children().length + 1;
+      //   $(".row").append('<div class="col-md-3 text-center"><img src="images/img_empty.png" width="150px" height="150px"><br>product ' + currentElementNo + ' - <strong>$' + currentElementNo + '</strong><br><button class="btn btn-danger my-cart-btn" data-id="' + currentElementNo + '" data-name="product ' + currentElementNo + '" data-summary="summary ' + currentElementNo + '" data-price="' + currentElementNo + '" data-quantity="1" data-image="images/img_empty.png">Add to Cart</button><a href="#" class="btn btn-info">Details</a></div>')
+      // });
+    });
+
+  </script>
+
+</body>
+
+</html>

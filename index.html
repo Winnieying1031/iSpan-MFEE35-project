@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>台新夢想家 | 官方網站</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="../小專題/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- 文件關聯 -->
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link href="./img/logo/logo icon.png" rel="icon" type="image/png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!-- 字體 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;700&family=Lobster&display=swap"
+    rel="stylesheet">
+  <!-- 輪播圖 -->
+  <link href="./carousel/carousel.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <!-- 倒數計時 -->
+  <link rel="stylesheet" type="text/css" href="css/flipdown/flipdown.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- 自己寫的CSS -->
+  <link rel="stylesheet" href="./css/img.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/contact_form.css">
+  <link rel="stylesheet" href="./css/shopping.css">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    h2.indexTitle {
+      font-weight: bold;
+      color: #414833;
+    }
+
+    /* 側邊欄style */
+    .social {
+      position: fixed;
+      right: 0;
+      bottom: 100px;
+    }
+
+    .social>div {
+      opacity: 0.5;
+    }
+
+    .social>div:hover {
+      opacity: 1.0;
+    }
+
+    /* 近期賽事 */
+    a>.game:hover {
+      opacity: 0.5;
+    }
+
+    @font-face {
+      font-family: "Lobster";
+      src: url("Lobster/Lobster-Regular.ttf");
+      font-family: "chenyuluoyan_thin-main";
+      src: url("chenyuluoyan_thin-main/chenyuluoyan_thin-main/ChenYuluoyan-Thin-Monospaced.ttf");
+
+    }
+
+    h2#teamName {
+      font-family: 'Lobster', 'chenyuluoyan_thin-main';
+      color: #283618;
+      font-weight: bold;
+      font-size: 3rem;
+    }
+
+    p#slogan {
+      background-color: #e9edc9;
+      font-family: 'chenyuluoyan_thin-main';
+      font-weight: bold;
+      color: #606c38;
+      font-size: 1.2rem;
+    }
+
+
+    /* 購物車icon */
+    .badge-notify {
+      background: #f28482;
+      position: relative;
+      top: -20px;
+      right: 5px;
+    }
+
+    .my-cart-icon-affix {
+      /* position: fixed; */
+      z-index: 999;
+    }
+
+    /* 夢想隨堂考 */
+    .Dtest {
+      cursor: pointer;
+    }
+
+
+  </style>
+
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img style="height: 40px;" class="img-fluid" src="./img/logo/logo.png"
+            alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="story.html">球隊故事</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./dreamers.html">球員介紹</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./schdualTIcket.html">比賽賽程</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://ticket.ibon.com.tw/ActivityInfo/Details/37455">購票</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./shopping.html">商城</a>
+            </li>
+          </ul>
+          <div class="nav_icon">
+            <button class="btn ">
+              <a class="nav-link" href="./login.html"><i class="bi bi-person"></i>
+              </a></button>
+            <button class="btn ">
+              <span class="bi bi-bag glyphicon glyphicon-shopping-cart my-cart-icon"><span
+                  class="badge badge-notify my-cart-badge"></span></span>
+            </button>
+            <button class="btn ">
+              <a class="nav-link" data-bs-toggle="modal" data-bs-target="#modal_email" href=""><i
+                  class="bi bi-envelope"></i>
+              </a>
+            </button>
+
+            <button id="btn_search" class="btn search-box">
+              <input type="text" class="search-input" placeholder="Search">
+              <a class="nav-link search-btn" href=""><i class="bi bi-search"></i>
+              </a></button>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="./img/img2.jpg"
+              class="d-block w-100" alt="..."></svg>
+
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1></h1>
+              <p></p>
+              <!-- <p><a class="btn btn-lg btn-primary" href="#"></a></p> -->
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="./img/img3.jpg"
+              class="d-block w-100" alt="..."></svg>
+
+          <div class="container">
+            <div class="carousel-caption">
+              <h1></h1>
+              <p></p>
+              <!-- <p><a class="btn btn-lg btn-primary" href="#"></a></p> -->
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="./img/img1.jpg"
+              class="d-block w-100" alt="..."></svg>
+
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1></h1>
+              <p></p>
+              <!-- <p><a class="btn btn-lg btn-primary" href="#"></a></p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+    <div class="container">
+      <h2 id="teamName">Formosa Taishin Dreamers 福爾摩沙台新夢想家</h2>
+      <p id="slogan" class="p-3 text-center">「一個人作夢，夢想只是空想；一群人作夢，夢想就會成真。」</p>
+      <h2 class="indexTitle">NEXT GAME :
+        <span style="color: #bc4b51;" >夢想家 vs 攻城獅</span> 2023/03/05 14:30
+      </h2>
+    </div>
+
+    <div class="container" id="countdown">
+      <div class="example">
+        <div id="flipdown" class="flipdown"></div>
+      </div>
+    </div>
+
+    <!-- Marketing messaging and featurettes
+  ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+      <h2 class="mt-3 indexTitle" style="font-weight: bold;">近期賽事</h2>
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <a href="https://ticket.ibon.com.tw/ActivityInfo/Details/37455">
+            <img class="game img-fluid" src="./img/game_1.png" alt=""></a>
+          <h2 class="mt-3">夢想家 vs 攻城獅</h2>
+          <p><a class="btn btn-secondary" href="https://ticket.ibon.com.tw/ActivityInfo/Details/37455">購票連結 &raquo;</a>
+          </p>
+        </div>
+
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <a href="https://ticket.ibon.com.tw/ActivityInfo/Details/37455">
+            <img class="game img-fluid" src="./img/game_2.png" alt="">
+          </a>
+          <h2 class="mt-3">夢想家 vs 國王</h2>
+          <p><a class="btn btn-secondary" href="https://ticket.ibon.com.tw/ActivityInfo/Details/37455">購票連結 &raquo;</a>
+          </p>
+        </div>
+
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <a href="https://ticket.ibon.com.tw/ActivityInfo/Details/37455">
+            <img class="game img-fluid" src="./img/game_3.png" alt="">
+          </a>
+          <h2 class="mt-3">夢想家 vs 攻城獅</h2>
+          <p><a class="btn btn-secondary" href="https://ticket.ibon.com.tw/ActivityInfo/Details/37455">購票連結 &raquo;</a>
+          </p>
+        </div>
+      </div>
+
+
+      <hr class="featurette-divider">
+      <!-- 夢想隨堂考 -->
+      <h2 class="mt-3 indexTitle" style="font-weight: bold;">夢想隨堂考</h2>
+      <div class="row">
+        <div class="col-lg-4">
+          <img id="place" onclick="changeplace()" class="Dtest img-fluid" src="./img/logo/logoGreen.jpg" 
+          onmouseover="this.src='./img/test1.png';"
+          onmouseout="this.src='./img/logo/logoGreen.jpg';" alt="">
+        </div>
+        <div class="col-lg-4">
+          <img id="leader" onclick="changeleader()" class="Dtest img-fluid" src="./img/logo/logoGreen.jpg" 
+          onmouseover="this.src='./img/test2.png';"
+          onmouseout="this.src='./img/logo/logoGreen.jpg';"alt="">
+        </div>
+        <div class="col-lg-4">
+          <img id="sexy" onclick="changesexy()"class="Dtest img-fluid" src="./img/logo/logoGreen.jpg" 
+          onmouseover="this.src='./img/test3.png';"
+          onmouseout="this.src='./img/logo/logoGreen.jpg';"alt="">
+        </div>
+      </div>
+
+
+
+      <!-- youtube highlight -->
+
+      <hr class="featurette-divider">
+      <h2 class="mt-3 indexTitle" style="font-weight: bold;">形象影片</h2>
+
+      <div class="row featurette">
+        <div class="col-md-6">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/-k4OVNhvFIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        </div>
+        <div class="col-md-6">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/kJceDaVCkGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- 側邊社群連結 -->
+      <div class="social me-3">
+        <div class="p-1" id="FB">
+          <a href="https://www.facebook.com/profile.php?id=100063493279527" target="_blank">
+            <img width="20" src="./img/facebook.png" alt="">
+          </a>
+        </div>
+
+        <div class="p-1" id="IG">
+          <a href="https://www.instagram.com/formosataishindreamers/" target="_blank">
+            <img width="20" src="./img/instagram.png" alt="">
+          </a>
+        </div>
+
+        <div class="p-1" id="YT">
+          <a href="https://www.youtube.com/channel/UCBWn_o4Z_FghGt6eB5gnkOQ/featured" target="_blank">
+            <img height="20" src="./img/youtube.png" alt="">
+          </a>
+        </div>
+
+        <div class="p-1">
+          <a href="#"><img src="./img/upward.png" width="20"></a>
+        </div>
+
+      </div>
+
+      <!-- email modal -->
+      <div id="modal_email" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">聯絡我們</h5>
+
+              <!-- <p class="d-flex" style="font-size: 10px;">謝謝您的主動來信，<br>請留下您的聯絡資料及諮詢的問題，我們會盡快回覆</p> -->
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div>
+
+            </div>
+            <div class="modal-body">
+
+              <form action="#" id="contact_form">
+                <div class="name">
+                  <label for="name"></label>
+                  <input type="text" placeholder="Name" name="name" id="name_input" required>
+                </div>
+                <div class="email">
+                  <label for="email"></label>
+                  <input type="email" placeholder="e-mail" name="email" id="email_input" required>
+                </div>
+                <div class="message">
+                  <label for="message"></label>
+                  <textarea name="message" placeholder="請留下您想詢問的問題，或是留下e-mail以外的聯絡方式。" id="message_input" cols="30"
+                    rows="5" required></textarea>
+                </div>
+                <div class="submit">
+                  <input type="submit" value="Send Message" id="form_button" />
+                </div>
+
+              </form>
+            </div>
+            <div class="modal-footer">
+
+              <!-- <button id="form_button" type="submit" class="btn btn-outline-success">發送</button> -->
+            </div>
+            <div id="caption"></div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <!-- FOOTER -->
+      <div class="container">
+        <img class="img-fluid" src="./img/sponsor.png" alt="">
+      </div>
+      <footer class="container py-3 my-4">
+
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">合作邀約</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">球迷意見</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">購物須知</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">條款</a></li>
+        </ul>
+      </footer>
+  </main>
+
+
+  <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/flipdown/flipdown.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script src="./js/jquery-2.2.3.min.js"></script>
+  <script type='text/javascript' src="./js/bootstrap.min.js"></script>
+  <script type='text/javascript' src="./js/jquery.mycart.js"></script>
+  <script type='text/javascript'>
+    $(function () {
+
+      var goToCartIcon = function ($addTocartBtn) {
+        var $cartIcon = $(".my-cart-icon");
+        var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({ "position": "fixed", "z-index": "999" });
+        $addTocartBtn.prepend($image);
+        var position = $cartIcon.position();
+        $image.animate({
+          top: position.top,
+          left: position.left
+        }, 500, "linear", function () {
+          $image.remove();
+        });
+      }
+
+      $('.my-cart-btn').myCart({
+        currencySymbol: '$',
+        classCartIcon: 'my-cart-icon',
+        classCartBadge: 'my-cart-badge',
+        classProductQuantity: 'my-product-quantity',
+        classProductRemove: 'my-product-remove',
+        classCheckoutCart: 'my-cart-checkout',
+        affixCartIcon: true,
+        showCheckoutModal: true,
+        // numberOfDecimals: 2,
+        cartItems: [],
+        clickOnAddToCart: function ($addTocart) {
+          goToCartIcon($addTocart);
+        },
+        afterAddOnCart: function (products, totalPrice, totalQuantity) {
+          console.log("afterAddOnCart", products, totalPrice, totalQuantity);
+        },
+        clickOnCartIcon: function ($cartIcon, products, totalPrice, totalQuantity) {
+          console.log("cart icon clicked", $cartIcon, products, totalPrice, totalQuantity);
+        },
+        checkoutCart: function (products, totalPrice, totalQuantity) {
+          var checkoutString = "Total Price: " + totalPrice + "\nTotal Quantity: " + totalQuantity;
+          checkoutString += "\n\n id \t name \t summary \t price \t quantity \t image path";
+          $.each(products, function () {
+            checkoutString += ("\n " + this.id + " \t " + this.name + " \t " + this.summary + " \t " + this.price + " \t " + this.quantity + " \t " + this.image);
+          });
+          alert(checkoutString)
+          console.log("checking out", products, totalPrice, totalQuantity);
+        },
+        // getDiscountPrice: function (products, totalPrice, totalQuantity) {
+        //   console.log("calculating discount", products, totalPrice, totalQuantity);
+        //   return totalPrice * 0.5;
+        // }
+      });
+
+      // $("#addNewProduct").click(function (event) {
+      //   var currentElementNo = $(".row").children().length + 1;
+      //   $(".row").append('<div class="col-md-3 text-center"><img src="images/img_empty.png" width="150px" height="150px"><br>product ' + currentElementNo + ' - <strong>$' + currentElementNo + '</strong><br><button class="btn btn-danger my-cart-btn" data-id="' + currentElementNo + '" data-name="product ' + currentElementNo + '" data-summary="summary ' + currentElementNo + '" data-price="' + currentElementNo + '" data-quantity="1" data-image="images/img_empty.png">Add to Cart</button><a href="#" class="btn btn-info">Details</a></div>')
+      // });
+    });
+
+  </script>
+  <script>
+    function changeplace(){
+      var x = document.getElementById("place").src;
+      console.log(x);
+      if(x.indexOf("test1.png") > -1 ) {
+        document.getElementById("place").src = "./img/place.png";
+      }else{
+        document.getElementById("place").src = "./img/test1.png";
+      };
+    }
+
+    function changeleader(){
+      var y = document.getElementById("leader").src;
+      console.log(y);
+      if(y.indexOf("test2.png") > -1 ) {
+        document.getElementById("leader").src = "./img/players11_square2.png";
+      }else{
+        document.getElementById("leader").src = "./img/test2.png";
+      };
+    }
+
+    function changesexy(){
+      var z = document.getElementById("sexy").src;
+      console.log(z);
+      if(z.indexOf("test3.png") > -1 ) {
+        document.getElementById("sexy").src = "./img/fomosasexy.jpg";
+      }else{
+        document.getElementById("sexy").src = "./img/test3.png";
+      };
+    }
+  </script>
+</body>
+
+</html>
